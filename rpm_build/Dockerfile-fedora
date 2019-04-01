@@ -1,0 +1,9 @@
+FROM fedora:latest
+
+RUN dnf update -y \
+    && dnf install -y gcc rpm-build rpm-devel help2man \
+    rpmlint make python bash coreutils diffutils patch rpmdevtools \
+    && rpmdev-setuptree
+
+COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
