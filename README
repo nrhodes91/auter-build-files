@@ -1,0 +1,6 @@
+AUTER-BUILD-FILES
+
+    Docker files with entrypoints to generate rpm and deb files for auter
+    releases. Also useful for testing.    
+
+    Repo should be mounted at /auter.
